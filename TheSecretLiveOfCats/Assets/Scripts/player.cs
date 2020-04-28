@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
+public class Player : MonoBehaviour
 {
   Animator animator;
   Rigidbody2D rigidBody;
   [SerializeField] float speed = 300f;
 
-  private bool playerFacingRight = true;
   void Start() {
     rigidBody = transform.GetComponent<Rigidbody2D>();
     animator = transform.GetComponent<Animator>();
   }
 
-  
   void Update() {
     Move();
   }
@@ -34,15 +32,5 @@ public class player : MonoBehaviour
     }
 
     rigidBody.velocity = velocity;
-  }
-
-  private void Flip() {
-    // Switch the way the player is labelled as facing.
-    playerFacingRight = !playerFacingRight;
-
-    // Multiply the player's x local scale by -1.
-    Vector3 theScale = transform.localScale;
-    theScale.x *= -1;
-    transform.localScale = theScale;
   }
 }
