@@ -187,6 +187,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_street_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5402802366716731100, guid: 80cedf3b964462544a92b9ecaee4d8a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8541675515759016979, guid: 80cedf3b964462544a92b9ecaee4d8a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -439,6 +444,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 30.01, y: 1.8886089}
   m_EdgeRadius: 0
+--- !u!1 &1661033059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 438394548579016822, guid: 667fae9028997d545ac9f0e84ce9d3a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 519154607963421745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!68 &1661033062
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661033059}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -4.672551, y: 0.037347138}
+  - {x: -0.0035266876, y: 3.025106}
+  - {x: 4.6849995, y: 0.024897993}
 --- !u!1 &1691292611 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 407106258627805360, guid: b06a36af09800b54c9aeba76d4d94d67,
@@ -483,6 +513,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f299c0972fc222458e37039a963c06a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 300
+  jumpForce: 1200
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &407106259235787635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -503,7 +538,7 @@ PrefabInstance:
     - target: {fileID: 407106258627805366, guid: b06a36af09800b54c9aeba76d4d94d67,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.83
+      value: -2.03
       objectReference: {fileID: 0}
     - target: {fileID: 407106258627805366, guid: b06a36af09800b54c9aeba76d4d94d67,
         type: 3}
@@ -560,6 +595,16 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 6995476139961728611, guid: b06a36af09800b54c9aeba76d4d94d67,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6995476139961728611, guid: b06a36af09800b54c9aeba76d4d94d67,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b06a36af09800b54c9aeba76d4d94d67, type: 3}
 --- !u!1001 &519154607963421745
@@ -573,6 +618,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: house
+      objectReference: {fileID: 0}
+    - target: {fileID: 438394548579016822, guid: 667fae9028997d545ac9f0e84ce9d3a2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1197382103830049485, guid: 667fae9028997d545ac9f0e84ce9d3a2,
         type: 3}
@@ -698,6 +748,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_street_0
       objectReference: {fileID: 0}
+    - target: {fileID: 5402802366716731100, guid: 80cedf3b964462544a92b9ecaee4d8a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8541675515759016979, guid: 80cedf3b964462544a92b9ecaee4d8a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -785,7 +840,7 @@ PrefabInstance:
     - target: {fileID: 6645123265618428607, guid: bc80da36fe9751c4d9e818779d84a63b,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc80da36fe9751c4d9e818779d84a63b, type: 3}
